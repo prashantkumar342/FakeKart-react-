@@ -1,0 +1,1208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  background-color: rgba(128, 128, 128, 0.721);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+//nav
+header {
+  nav {
+    background-color: black;
+    padding: 1vh;
+    display: flex;
+    .logo {
+      margin: auto 0 auto 0;
+      font-size: 3vh;
+      font-family: "ubuntu";
+      width: fit-content;
+      p {
+        padding: 0 1vh;
+        border-radius: 0.6vh;
+        display: flex;
+        // margin: auto 0 auto 0;
+        background-color: rgb(255, 255, 255);
+        h1:first-child {
+          color: rgb(0, 0, 255);
+        }
+        h1:nth-child(2) {
+          color: rgb(255, 6, 6);
+        }
+      }
+    }
+    ul {
+      list-style-type: none;
+      width: fit-content;
+      display: flex;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 1vw 2vw;
+      a {
+        padding: 0.5vh 1.5vh;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 2.5vh;
+        border-radius: 0.6vh;
+        background-color: blue;
+        font-family: "roboto";
+      }
+    }
+    .navSearch {
+      width: fit-content;
+      background-color: rgb(255, 255, 255);
+      margin: 0 0 0 auto;
+      display: flex;
+      border-radius: 0.6vh;
+      input::placeholder {
+        font-size: 2.5vh;
+        color: rgb(0, 0, 0);
+      }
+      input {
+        width: 30vw;
+        color: rgb(0, 0, 0);
+        border: solid 1px transparent;
+        background-color: transparent;
+        padding: 0.5vh 1vh;
+        font-size: 2vh;
+        border-radius: 0.6vh 0 0 0.6vh;
+        outline: none;
+      }
+      .fa-magnifying-glass {
+        border-radius: 0 0.6vh 0.6vh 0;
+        color: rgb(255, 255, 255);
+        background-color: blue;
+        margin: auto;
+        font-size: 3.2vh;
+        padding: 1vh 1vh;
+      }
+    }
+    .menubtn {
+      display: none;
+    }
+  }
+}
+//home
+//Overview
+main {
+  .categoryBtnWrapper {
+    width: fit-content;
+    display: flex;
+    background: rgb(255, 255, 255);
+    height: fit-content;
+    z-index: 999;
+    width: 100%;
+    justify-content: center;
+    // flex-wrap: wrap;
+    gap: 0px 2px;
+    // padding: 1vh;
+    h3 {
+      font-family: "ubuntu";
+    }
+    li {
+      list-style: none;
+      margin: 2vh 0;
+      a {
+        font-size: 2vh;
+        font-family: "roboto";
+        background-color: rgb(0, 61, 246);
+        color: white;
+        padding: 0.5vh 1vh;
+        display: block;
+        text-decoration: none;
+        border-radius: 0.6vh;
+      }
+    }
+  }
+  .overview {
+    height: 50vh;
+    margin: 2vh 0 0 0;
+    display: flex;
+    .slideImages {
+      // outline: red solid;
+      background-color: white;
+      -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+      overflow: hidden;
+      width: 35vw;
+      margin: auto 0 auto 2vh;
+      border-radius: 1vh;
+      height: 100%;
+      display: flex;
+      img {
+        width: 300px;
+        animation: slideAnime 20s infinite;
+      }
+      p {
+        z-index: 999;
+        display: none;
+        .fa-bars-progress {
+          // outline: red solid;
+
+          padding: 1vh;
+          background-color: rgb(0, 0, 255);
+          backdrop-filter: blur(20px);
+          font-size: 3vh;
+          color: rgb(255, 255, 255);
+          border-radius: 0 0 1vh 0;
+        }
+      }
+    }
+    .salecard {
+      // width: fit-content;
+      margin: auto;
+      .saleaside {
+        -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+        background-color: white;
+        border-radius: 1vh;
+        padding: 1vh 0;
+        // outline: red solid;
+        width: 60vw;
+        margin: auto;
+        height: 50vh;
+        .saleName {
+          text-align: center;
+          font-family: "ubuntu";
+          font-size: 3vh;
+          padding: 0.5vh 1vh;
+          background-color: rgb(240, 117, 10);
+          color: rgb(255, 255, 255);
+          .fa-bell {
+            animation: bell 0.5s infinite ease;
+          }
+          @keyframes bell {
+            0% {
+              transform: rotate(30deg);
+            }
+            33% {
+              transform: rotate(-30deg);
+            }
+            100% {
+              transform: rotate(30deg);
+            }
+          }
+        }
+        .des {
+          font-size: 2.2vh;
+          padding: 0.5vh 1vh;
+          font-family: "roboto";
+        }
+        .btn {
+          border: none;
+          background-color: rgba(2, 71, 83, 0.758);
+          font-size: 2vh;
+          color: white;
+          padding: 1vh 1.5vh;
+          width: fit-content;
+          border-radius: 0 1vh 0.6vh 0;
+          cursor: pointer;
+          margin: auto;
+        }
+        .brands {
+          background-color: blue;
+          color: white;
+          font-size: 2.2vh;
+          font-family: "ubuntu";
+          text-align: center;
+          padding: 1vh;
+          margin: 1vh 0;
+        }
+        .brandsBtns {
+          background-color: rgb(9, 83, 93);
+          padding: 1vh;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          .brandbtn {
+            font-size: 2vh;
+            background-color: white;
+            border-radius: 0.6vh;
+            cursor: pointer;
+            padding: 0.5vh 2vh;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+//categorized product style
+main {
+  .categoryproductsWrapper {
+    // background-color: white;
+    padding: 1vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vh 3vh;
+    .heading {
+      width: 94vw;
+      border-radius: 0.6vh;
+      background-color: rgb(0, 0, 0);
+      border: none;
+      padding: 0.5vh 1vh;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: 4vh;
+      p {
+        margin: auto;
+        padding: 0 1vh;
+        border-radius: 0.6vh;
+        // background-color: blue;
+        width: fit-content;
+      }
+    }
+    .card {
+      width: 94vh;
+      display: flex;
+      margin: 1vh 0vh;
+      border-radius: 1vh;
+      padding: 2vh 2vh;
+      background-color: rgb(195, 93, 9);
+      // outline: solid;
+      .card-image {
+        border-radius: 0.5vh;
+        img {
+          height: 15vw;
+          border-radius: 0.5vh;
+          width: 15vw;
+          cursor: pointer;
+        }
+      }
+      .productdetail {
+        margin: 0 0 0 2vh;
+        h3 {
+          background-color: rgb(255, 255, 255);
+          font-size: 3vh;
+          border-radius: 0.5vh;
+          color: rgb(0, 0, 0);
+          font-family: "ubuntu";
+          width: 12.4vw;
+          margin: 0.5vh 0;
+          padding: 0.5vh 1vh;
+        }
+        p {
+          cursor: pointer;
+          margin: 1vh 0;
+          border-radius: 0.5vh;
+          color: black;
+          background-color: rgb(255, 255, 255);
+          padding: 0.5vh 1vh;
+          font-size: 2.5vh;
+          font-family: "ubuntu";
+        }
+        .addtocartbtn {
+          outline: none;
+          border: none;
+          color: white;
+          background-color: blue;
+          font-family: "ubuntu";
+          font-size: 2vh;
+          cursor: pointer;
+          margin: 1vh 0;
+          padding: 0.5vh 1vh;
+          border-radius: 0.5vh;
+        }
+        .addtowishlist {
+          outline: none;
+          border: none;
+          color: white;
+          background-color: rgb(8, 125, 123);
+          font-family: "ubuntu";
+          font-size: 2vh;
+          cursor: pointer;
+          margin: 1vh 0.5vh;
+          padding: 0.5vh 1vh;
+          border-radius: 0.5vh;
+        }
+      }
+    }
+  }
+}
+//cart
+main {
+  .cart {
+    padding: 1vh;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    .itemCard {
+      .imgrow {
+        width: 10vw;
+      }
+      table {
+        margin: 0.5vh 0;
+        background-color: rgb(255, 255, 255);
+
+        font-family: "roboto";
+        color: rgb(0, 0, 0);
+      }
+      p {
+        font-size: 2vh;
+      }
+      table,
+      tr,
+      td {
+        width: 48.5vw;
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 0.5vh;
+      }
+      .delbtn {
+        button {
+          border: none;
+          padding: 0.5vh 1vh;
+          background-color: red;
+          color: white;
+          border-radius: 0.6vh;
+          cursor: pointer;
+        }
+      }
+      .delbtn,
+      .quantitybtns {
+        text-align: center;
+        width: 100vw;
+      }
+      .minusbtn,
+      .plusbtn {
+        color: rgb(255, 255, 255);
+        border: none;
+        background-color: rgb(4, 72, 108);
+        cursor: pointer;
+        padding: 0vh 1vh;
+        border-radius: 0.6vh;
+        font-size: 2.5vh;
+        margin: 0 1vh;
+      }
+      .qunatity {
+        background-color: transparent;
+        border: none;
+      }
+      img {
+        margin: auto;
+        width: 50px;
+      }
+    }
+    .pricing {
+      width: fit-content;
+      background-color: white;
+      table,
+      tr,
+      td {
+        width: 48.5vw;
+        padding: 0.5vh;
+        border: solid 1px white;
+        border-collapse: collapse;
+      }
+      .checkout {
+        background-color: orange;
+      }
+      .pricinghead {
+        color: white;
+        background-color: gray;
+        padding: 1vh 0;
+        font-size: 2.5vh;
+      }
+      .totalprice,
+      .discount,
+      .gtotal {
+        background-color: rgb(6, 86, 144);
+        color: white;
+      }
+      td {
+        font-size: 2.3vh;
+        font-family: "roboto";
+        padding: 0.5vh;
+
+        #checkoutbtn {
+          border: none;
+          cursor: pointer;
+          color: rgb(0, 0, 0);
+          font-size: 3vh;
+          width: 100%;
+          padding: 0.5vh 0;
+          background-color: orange;
+        }
+      }
+    }
+    //emty cart
+    .emptycart {
+      height: 90vh;
+      width: 100%;
+      font-family: roboto;
+      table,
+      tr,
+      td {
+        backdrop-filter: blur(20px);
+        height: 100%;
+        background-color: rgb(53, 51, 51);
+        border: none;
+        color: white;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table {
+        text-align: center;
+        font-size: 4vh;
+      }
+    }
+  }
+}
+//wishlist
+main {
+  .wishlist {
+    padding: 1vh;
+    .wishlistItems {
+      padding: 0 0 2vh 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 10px 10px;
+      .wishlistheading {
+        background-color: blue;
+        color: white;
+        width: 100%;
+        padding: 0.5vh;
+        display: block;
+        text-align: center;
+        font-size: 4vh;
+        font-family: "roboto";
+      }
+      .wishlistcard {
+        background-color: white;
+        width: 200px;
+        .title {
+          background-color: rgb(0, 0, 0);
+          font-size: 2.2vh;
+          font-family: "roboto";
+          color: white;
+          padding: 0 0.5vh;
+        }
+        .heartNdelete {
+          justify-content: space-between;
+          display: flex;
+          padding: 1vh;
+          .fa-heart {
+            color: red;
+          }
+          .remove {
+            border-radius: 0.6vh;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            padding: 0.5vh 1vh;
+          }
+          .fa-trash {
+            color: rgb(255, 255, 255);
+            background-color: black;
+          }
+        }
+        .image {
+          margin: 0 auto;
+          width: 120px;
+          img {
+            width: 100%;
+          }
+        }
+        .addtocartbtn {
+          border: none;
+          background-color: blue;
+          color: white;
+          padding: 1vh;
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+    }
+    .emptywishlist {
+      height: 88vh;
+      background-color: rgb(53, 51, 51);
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      p {
+        color: white;
+        font-family: "roboto";
+        font-size: 4vh;
+      }
+    }
+  }
+}
+//Product specs
+main {
+  .productspecs {
+    background-color: white;
+    padding: 2vh;
+    display: flex;
+    // outline: rgb(255, 255, 255) solid;
+    .image {
+      width: 300px;
+      background-color: white;
+      border-radius: 0.6vh;
+      img {
+        width: 300px;
+      }
+    }
+    .productDetails {
+      // outline: red solid;
+      margin: 0 0 0 2vh;
+      padding: 0 2vh;
+      .title {
+        font-size: 2.4vh;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 162, 0);
+        padding: 0.5vh;
+        font-family: "roboto";
+      }
+      .price {
+        background-color: rgb(64, 64, 95);
+        margin: 0.5vh 0 0 0;
+        padding: 0.5vh;
+        width: fit-content;
+        font-size: 2.5vh;
+        font-family: "roboto";
+        color: white;
+      }
+      .des {
+        font-size: 2vh;
+        font-family: "roboto";
+        // outline: red solid;
+        padding: 0.5vh;
+        border-left: 2px red solid;
+        margin-top: 2vh;
+        width: 60%;
+      }
+    }
+    .tags {
+      // outline: red solid;
+      margin: 1vh 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      gap: 10px;
+      p {
+        background-color: rgba(0, 0, 0, 0.731);
+        width: fit-content;
+        font-size: 2vh;
+        font-family: "ubuntu";
+        padding: 0.5vh;
+        color: white;
+      }
+    }
+    .buttons {
+      padding: 1vh 0;
+      display: flex;
+      justify-content: space-between;
+      button {
+        cursor: pointer;
+        color: white;
+        padding: 1vh;
+        font-family: "ubuntu";
+        font-size: 2.5vh;
+        border: none;
+      }
+      .addtocart {
+        width: 49%;
+        background-color: blue;
+      }
+      .wishlish {
+        width: 49%;
+        background-color: red;
+      }
+    }
+  }
+}
+@keyframes slideAnime {
+  0%,
+  100% {
+    transform: translateX(250px);
+  }
+  5% {
+    transform: translateX(-250px);
+  }
+  10% {
+    transform: translateX(-500px);
+  }
+  15% {
+    transform: translateX(-750px);
+  }
+  20% {
+    transform: translateX(-1000px);
+  }
+  25% {
+    transform: translateX(-1250px);
+  }
+  30% {
+    transform: translateX(-1500px);
+  }
+  35% {
+    transform: translateX(-1750px);
+  }
+  40% {
+    transform: translateX(-2000px);
+  }
+  45% {
+    transform: translateX(-2250px);
+  }
+  50% {
+    transform: translateX(-2500px);
+  }
+  55% {
+    transform: translateX(-2750px);
+  }
+  60% {
+    transform: translateX(-3000px);
+  }
+  65% {
+    transform: translateX(-3250px);
+  }
+  70% {
+    transform: translateX(-3500px);
+  }
+  75% {
+    transform: translateX(-3750px);
+  }
+  80% {
+    transform: translateX(-4000px);
+  }
+  85% {
+    transform: translateX(-4250px);
+  }
+  90% {
+    transform: translateX(-4500px);
+  }
+  95% {
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  header {
+    nav {
+      .menubtn {
+        color: white;
+        font-family: "ubuntu";
+        width: fit-content;
+        display: flex;
+        font-size: 2vh;
+        .fa-bars {
+          padding: 0.5vh 1vh;
+          margin: auto;
+          background-color: rgb(255, 255, 255);
+          border-radius: 0.6vh;
+          color: rgb(0, 0, 0);
+        }
+      }
+      .logo {
+        font-size: 2vh;
+      }
+      .navSearch {
+        input::placeholder {
+          font-size: 2vh;
+        }
+        input {
+          color: rgb(0, 0, 0);
+          padding: 0.5vh;
+          font-size: 2vh;
+          border-radius: 0.6vh 0 0 0.6vh;
+        }
+        .fa-magnifying-glass {
+          border-radius: 0 0.6vh 0.6vh 0;
+          font-size: 2vh;
+        }
+      }
+      .navMenuLinks {
+        z-index: 999;
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        padding: 0;
+        right: 1vh;
+        margin-top: 6vh;
+        background-color: rgb(1, 7, 50);
+        border-radius: 0.6vh;
+        li {
+          padding: 1vh 0;
+        }
+        a {
+          cursor: pointer;
+          padding: 0 5vh;
+          // outline: red solid;
+          color: rgb(255, 255, 255);
+          font-size: 2.5vh;
+          background-color: transparent;
+          width: 3vw;
+        }
+      }
+      .navMenuLinks.active {
+        display: block;
+      }
+      .navSearch {
+        margin: 0 auto 0 auto;
+      }
+    }
+  }
+  main {
+    .cart {
+      padding: 1vh;
+      .itemCard {
+        table {
+          margin: 0.5vh 0;
+        }
+        table,
+        tr,
+        td {
+          width: 60vw;
+        }
+        td {
+          padding: 0.5vh;
+        }
+        .delbtn {
+          button {
+            padding: 0.5vh 1vh;
+          }
+        }
+        .minusbtn,
+        .plusbtn {
+          padding: 0vh 1vh;
+          font-size: 3vh;
+          margin: 0 1vh;
+        }
+        img {
+          margin: auto;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  main {
+    .categoryproductsWrapper {
+      padding: 1vh;
+      .card {
+        margin: 0.5vh 0.5vh;
+        border-radius: 1vh;
+        padding: 1vh;
+        .card-image {
+          border-radius: 0.5vh;
+          img {
+            height: 35vw;
+            border-radius: 0.5vh;
+            width: 30vw;
+          }
+        }
+        .productdetail {
+          margin: 0 0 0 2vh;
+          h3 {
+            font-size: 2vh;
+            border-radius: 0.5vh;
+            width: fit-content;
+            margin: 0.5vh 0;
+            padding: 0.5vh 1vh;
+          }
+          p {
+            margin: 1vh 0;
+            border-radius: 0.5vh;
+            padding: 0.5vh 1vh;
+            font-size: 2vh;
+          }
+        }
+      }
+    }
+    //cart
+    .cart {
+      padding: 1vh;
+      .itemCard {
+        table {
+          margin: 0.5vh 0;
+          width: 100%;
+        }
+        table,
+        tr,
+        td {
+          padding: 0.5vh;
+        }
+        .delbtn {
+          button {
+            padding: 0.5vh 1vh;
+          }
+        }
+        .minusbtn,
+        .plusbtn {
+          padding: 0vh 1vh;
+          font-size: 3vh;
+          margin: 0 1vh;
+        }
+        img {
+          margin: auto;
+          width: 100px;
+        }
+      }
+    }
+  }
+  //home
+  //Overview
+  main {
+    .overview {
+      .categoryBtnWrapper {
+        width: fit-content;
+        display: flex;
+        background: rgb(255, 255, 255);
+        height: fit-content;
+        z-index: 999;
+        width: 100%;
+        justify-content: left;
+        // flex-wrap: wrap;
+        gap: 0px 2px;
+        // padding: 1vh;
+        h3 {
+          font-family: "ubuntu";
+        }
+        li {
+          list-style: none;
+          margin: 2vh 0;
+          a {
+            font-size: 2vh;
+            font-family: "roboto";
+            background-color: rgb(0, 61, 246);
+            color: white;
+            padding: 0.5vh 1vh;
+            display: block;
+            text-decoration: none;
+            border-radius: 0.6vh;
+          }
+        }
+      }
+      height: 100vh;
+      margin: 2vh 0 0 0;
+      display: flex;
+      flex-direction: column;
+      .slideImages {
+        // outline: red solid;
+        background-color: white;
+        -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+        overflow: hidden;
+        width: 90vw;
+        margin: auto;
+        border-radius: 1vh;
+        height: 100%;
+        display: flex;
+        img {
+          width: 300px;
+          animation: slideAnime 20s infinite;
+        }
+        p {
+          z-index: 999;
+          display: none;
+          .fa-bars-progress {
+            // outline: red solid;
+
+            padding: 1vh;
+            background-color: rgb(0, 0, 255);
+            backdrop-filter: blur(20px);
+            font-size: 3vh;
+            color: rgb(255, 255, 255);
+            border-radius: 0 0 1vh 0;
+          }
+        }
+      }
+      .salecard {
+        padding: 2vh;
+        .saleaside {
+          -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+          background-color: white;
+          border-radius: 1vh;
+          width: 90vw;
+          height: 100%;
+          .saleName {
+            text-align: center;
+            font-family: "ubuntu";
+            font-size: 3vh;
+            padding: 0.5vh 1vh;
+            background-color: rgb(240, 117, 10);
+            color: rgb(255, 255, 255);
+            .fa-bell {
+              animation: bell 0.5s infinite ease;
+            }
+            @keyframes bell {
+              0% {
+                transform: rotate(30deg);
+              }
+              33% {
+                transform: rotate(-30deg);
+              }
+              100% {
+                transform: rotate(30deg);
+              }
+            }
+          }
+          .des {
+            font-size: 2.2vh;
+            padding: 0.5vh 1vh;
+
+            font-family: "roboto";
+          }
+          .btn {
+            border: none;
+            background-color: rgba(2, 71, 83, 0.758);
+            font-size: 2vh;
+            color: white;
+            padding: 1vh 1.5vh;
+            width: fit-content;
+            border-radius: 0 1vh 0.6vh 0;
+            cursor: pointer;
+            margin: auto;
+          }
+          .brands {
+            background-color: blue;
+            color: white;
+            font-size: 2.2vh;
+            font-family: "ubuntu";
+            text-align: center;
+            padding: 1vh;
+            margin: 1vh 0;
+          }
+          .brandsBtns {
+            background-color: rgb(9, 83, 93);
+            padding: 1vh;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            .brandbtn {
+              font-size: 2vh;
+              background-color: white;
+              border-radius: 0.6vh;
+              cursor: pointer;
+              padding: 0.5vh 2vh;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  //product specs
+  main {
+    .productspecs {
+      background-color: white;
+      padding: 2vh;
+      display: flex;
+      // outline: rgb(255, 255, 255) solid;
+      .image {
+        width: 300px;
+        background-color: white;
+        border-radius: 0.6vh;
+        img {
+          width: 300px;
+        }
+      }
+      .productDetails {
+        // outline: red solid;
+        margin: 0 0 0 2vh;
+        padding: 0 2vh;
+        .title {
+          font-size: 2.4vh;
+          color: rgb(0, 0, 0);
+          background-color: rgb(255, 162, 0);
+          padding: 0.5vh;
+          font-family: "roboto";
+        }
+        .price {
+          background-color: rgb(64, 64, 95);
+          margin: 0.5vh 0 0 0;
+          padding: 0.5vh;
+          width: fit-content;
+          font-size: 2.5vh;
+          font-family: "roboto";
+          color: white;
+        }
+        .des {
+          font-size: 2vh;
+          font-family: "roboto";
+          // outline: red solid;
+          padding: 0.5vh;
+          border-left: 2px red solid;
+          margin-top: 2vh;
+          width: 100%;
+        }
+      }
+      .tags {
+        // outline: red solid;
+        margin: 1vh 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 10px;
+        p {
+          background-color: rgba(0, 0, 0, 0.731);
+          width: fit-content;
+          font-size: 2vh;
+          font-family: "ubuntu";
+          padding: 0.5vh;
+          color: white;
+        }
+      }
+      .buttons {
+        padding: 1vh 0;
+        display: flex;
+        justify-content: space-between;
+        button {
+          cursor: pointer;
+          color: white;
+          padding: 1vh;
+          font-family: "ubuntu";
+          font-size: 2.5vh;
+          border: none;
+        }
+        .addtocart {
+          width: 49%;
+          background-color: blue;
+        }
+        .wishlish {
+          width: 49%;
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  //cart
+  main {
+    .cart {
+      padding: 0.5vh;
+      .itemCard {
+        table {
+          margin: 0.5vh 0;
+          width: 100%;
+        }
+        table,
+        tr,
+        td {
+          padding: 0.5vh;
+        }
+        .delbtn {
+          button {
+            padding: 0.5vh 1vh;
+          }
+        }
+        .minusbtn,
+        .plusbtn {
+          padding: 0vh 0.2vh;
+          font-size: 2vh;
+          margin: 0 1vh;
+        }
+        .qunatity {
+          font-size: 2vh;
+        }
+        img {
+          margin: auto;
+          width: 70px;
+        }
+      }
+    }
+  }
+  //product specs
+  main {
+    .productspecs {
+      background-color: white;
+      padding: 2vh;
+      display: flex;
+      flex-direction: column;
+      // outline: rgb(255, 255, 255) solid;
+      .image {
+        margin: 0 auto;
+        width: 300px;
+        background-color: white;
+        border-radius: 0.6vh;
+        img {
+          width: 300px;
+        }
+      }
+      .productDetails {
+        // outline: red solid;
+        margin: 2vh 0 0 0;
+        padding: 0vh;
+        .title {
+          font-size: 2vh;
+          color: rgb(0, 0, 0);
+          background-color: rgb(255, 162, 0);
+          padding: 0.5vh;
+          font-family: "roboto";
+        }
+        .price {
+          background-color: rgb(64, 64, 95);
+          margin: 0.5vh 0 0 0;
+          padding: 0.5vh;
+          width: fit-content;
+          font-size: 2.2vh;
+          font-family: "roboto";
+          color: white;
+        }
+        .des {
+          font-size: 1.6vh;
+          font-family: "roboto";
+          // outline: red solid;
+          padding: 0.5vh;
+          border-left: 2px red solid;
+          margin-top: 2vh;
+          width: 100%;
+        }
+      }
+      .tags {
+        // outline: red solid;
+        margin: 1vh 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 5px;
+        p {
+          background-color: rgba(0, 0, 0, 0.731);
+          width: fit-content;
+          font-size: 1.8vh;
+          font-family: "ubuntu";
+          padding: 0.5vh;
+          color: white;
+        }
+      }
+      .buttons {
+        padding: 1vh 0;
+        display: flex;
+        justify-content: space-between;
+        button {
+          cursor: pointer;
+          color: white;
+          padding: 1vh;
+          font-family: "ubuntu";
+          font-size: 2.3vh;
+          border: none;
+        }
+        .addtocart {
+          width: 49%;
+          background-color: blue;
+        }
+        .wishlish {
+          width: 49%;
+          background-color: red;
+        }
+      }
+    }
+  }
+}
