@@ -15,8 +15,6 @@ const Cart = () => {
     setCartArr(JSON.parse(localStorage.getItem('cartItems')))
     axios.get('https://fakestoreapi.in/api/products?limit=150')
       .then(data => setProducts(data.data.products))
-
-
   }, [])
   const removeFromCart = (productId) => {
     const newCartArr = cartArr.filter((id) => {

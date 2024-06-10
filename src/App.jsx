@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react"
+import { lazy, Suspense, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
 const Home = lazy(() => import('./components/Home'))
 const Order = lazy(() => import('./components/Order'))
@@ -9,7 +9,12 @@ const Categories = lazy(() => import('./components/Categories'))
 const Productspecs = lazy(() => import('./components/Productspecs'))
 
 function App() {
-
+  useEffect(() => {
+    let wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || []
+    let cart = JSON.parse(localStorage.getItem('cartItems')) || []
+    localStorage.setItem('cartItems', JSON.stringify(cart))
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlist))
+  }, [])
 
   return (
     <>
