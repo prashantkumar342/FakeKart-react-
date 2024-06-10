@@ -13,16 +13,19 @@ const Categories = () => {
     axios.get(`https://fakestoreapi.in/api/products/category?type=${category}`)
       .then(data => setProducts(data.data.products))
   }, [category])
+  let cart = JSON.parse(localStorage.getItem('cartItems')) || []
+
   const addToCart = (productId) => {
-    let cart = JSON.parse(localStorage.getItem('cartItems')) || []
     let found = cart.some(id => id == productId)
     if (!found) {
       cart.push(productId)
     }
     localStorage.setItem('cartItems', JSON.stringify(cart))
   }
+
+
+  let wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || []
   const addToWishlist = (productId) => {
-    let wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || []
     let found = wishlist.some(id => id == productId)
     if (!found) {
       wishlist.push(productId)
