@@ -84,7 +84,6 @@ header {
   }
 }
 //home
-//Overview
 main {
   .categoryBtnWrapper {
     width: fit-content;
@@ -94,9 +93,6 @@ main {
     z-index: 999;
     width: 100%;
     justify-content: center;
-    // flex-wrap: wrap;
-    gap: 0px 2px;
-    // padding: 1vh;
     h3 {
       font-family: "ubuntu";
     }
@@ -104,128 +100,105 @@ main {
       list-style: none;
       margin: 2vh 0;
       a {
-        font-size: 2vh;
+        font-size: 1.6vh;
         font-family: "roboto";
         background-color: rgb(0, 61, 246);
         color: white;
         padding: 0.5vh 1vh;
         display: block;
+        outline: 1px white solid;
         text-decoration: none;
-        border-radius: 0.6vh;
       }
     }
   }
-  .overview {
-    height: 50vh;
+  .saleOverview {
     margin: 2vh 0 0 0;
+    // outline: black solid;
     display: flex;
-    .slideImages {
-      // outline: red solid;
+    .salephoto {
       background-color: white;
-      -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-      overflow: hidden;
-      width: 35vw;
-      margin: auto 0 auto 2vh;
-      border-radius: 1vh;
-      height: 100%;
-      display: flex;
+      width: 50%;
       img {
-        width: 300px;
-        animation: slideAnime 20s infinite;
-      }
-      p {
-        z-index: 999;
-        display: none;
-        .fa-bars-progress {
-          // outline: red solid;
-
-          padding: 1vh;
-          background-color: rgb(0, 0, 255);
-          backdrop-filter: blur(20px);
-          font-size: 3vh;
-          color: rgb(255, 255, 255);
-          border-radius: 0 0 1vh 0;
-        }
+        width: 100%;
       }
     }
-    .salecard {
-      // width: fit-content;
-      margin: auto;
-      .saleaside {
-        -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-        background-color: white;
-        border-radius: 1vh;
-        padding: 1vh 0;
-        // outline: red solid;
-        width: 60vw;
-        margin: auto;
-        height: 50vh;
-        .saleName {
-          text-align: center;
-          font-family: "ubuntu";
-          font-size: 3vh;
-          padding: 0.5vh 1vh;
-          background-color: rgb(240, 117, 10);
-          color: rgb(255, 255, 255);
-          .fa-bell {
-            animation: bell 0.5s infinite ease;
-          }
-          @keyframes bell {
-            0% {
-              transform: rotate(30deg);
-            }
-            33% {
-              transform: rotate(-30deg);
-            }
-            100% {
-              transform: rotate(30deg);
+    .hotsale {
+      background-color: rgb(255, 255, 255);
+      padding: 2vh;
+      width: 50%;
+      .hotproducts {
+        justify-content: space-between;
+        gap: 3%;
+        display: flex;
+        .card {
+          border: 1px solid;
+          background-color: white;
+          width: 22%;
+          .image {
+            width: 90%;
+            margin: auto;
+
+            img {
+              width: 100%;
             }
           }
-        }
-        .des {
-          font-size: 2.2vh;
-          padding: 0.5vh 1vh;
-          font-family: "roboto";
-        }
-        .btn {
-          border: none;
-          background-color: rgba(2, 71, 83, 0.758);
-          font-size: 2vh;
-          color: white;
-          padding: 1vh 1.5vh;
-          width: fit-content;
-          border-radius: 0 1vh 0.6vh 0;
-          cursor: pointer;
-          margin: auto;
-        }
-        .brands {
-          background-color: blue;
-          color: white;
-          font-size: 2.2vh;
-          font-family: "ubuntu";
-          text-align: center;
-          padding: 1vh;
-          margin: 1vh 0;
-        }
-        .brandsBtns {
-          background-color: rgb(9, 83, 93);
-          padding: 1vh;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          gap: 10px;
-          .brandbtn {
+          .title {
+            background-color: black;
+            color: white;
             font-size: 2vh;
-            background-color: white;
-            border-radius: 0.6vh;
-            cursor: pointer;
-            padding: 0.5vh 2vh;
-            border: none;
+            font-family: "roboto";
+            padding: 0.5vh;
           }
+          .btns {
+            // padding: 0.5vh 0;
+            display: flex;
+            button {
+              padding: 0.5vh;
+              cursor: pointer;
+              border: none;
+              color: white;
+              font-size: 2.2vh;
+              font-family: "roboto";
+              width: 50%;
+            }
+            .addtowishlist {
+              background-color: red;
+            }
+            .addtocart {
+              background-color: blue;
+            }
+          }
+        }
+      }
+      .hotbrands {
+        margin: 1vh 0 1vh 0;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.589);
+        gap: 10px;
+        padding: 1vh 0;
+        button {
+          background-color: rgb(255, 255, 255);
+          border-radius: 0.5vh;
+          cursor: pointer;
+          width: 10vw;
+          color: rgb(0, 0, 0);
+          border: none;
+          padding: 1vh 1.5vh;
+        }
+      }
+      .saledetails {
+        border-left: 1vh solid red;
+        padding: 0 0 0 1vh;
+        .salename {
+          padding: 0.5vh 0;
+          font-size: 3vh;
+          font-family: "ubuntu";
+        }
+        .saledes {
+          font-size: 2.3vh;
+          padding: 0.5vh 0;
+          font-family: "roboto";
         }
       }
     }
@@ -555,7 +528,6 @@ main {
       }
     }
     .productDetails {
-      // outline: red solid;
       margin: 0 0 0 2vh;
       padding: 0 2vh;
       .title {
@@ -577,7 +549,7 @@ main {
       .des {
         font-size: 2vh;
         font-family: "roboto";
-        // outline: red solid;
+
         padding: 0.5vh;
         border-left: 2px red solid;
         margin-top: 2vh;
@@ -585,7 +557,6 @@ main {
       }
     }
     .tags {
-      // outline: red solid;
       margin: 1vh 0;
       display: flex;
       flex-wrap: wrap;
@@ -623,69 +594,7 @@ main {
     }
   }
 }
-@keyframes slideAnime {
-  0%,
-  100% {
-    transform: translateX(250px);
-  }
-  5% {
-    transform: translateX(-250px);
-  }
-  10% {
-    transform: translateX(-500px);
-  }
-  15% {
-    transform: translateX(-750px);
-  }
-  20% {
-    transform: translateX(-1000px);
-  }
-  25% {
-    transform: translateX(-1250px);
-  }
-  30% {
-    transform: translateX(-1500px);
-  }
-  35% {
-    transform: translateX(-1750px);
-  }
-  40% {
-    transform: translateX(-2000px);
-  }
-  45% {
-    transform: translateX(-2250px);
-  }
-  50% {
-    transform: translateX(-2500px);
-  }
-  55% {
-    transform: translateX(-2750px);
-  }
-  60% {
-    transform: translateX(-3000px);
-  }
-  65% {
-    transform: translateX(-3250px);
-  }
-  70% {
-    transform: translateX(-3500px);
-  }
-  75% {
-    transform: translateX(-3750px);
-  }
-  80% {
-    transform: translateX(-4000px);
-  }
-  85% {
-    transform: translateX(-4250px);
-  }
-  90% {
-    transform: translateX(-4500px);
-  }
-  95% {
-    transform: translateX(0px);
-  }
-}
+
 @media screen and (max-width: 1200px) {
   header {
     nav {
@@ -737,7 +646,7 @@ main {
         a {
           cursor: pointer;
           padding: 0 5vh;
-          // outline: red solid;
+
           color: rgb(255, 255, 255);
           font-size: 2.5vh;
           background-color: transparent;
@@ -752,6 +661,7 @@ main {
       }
     }
   }
+  //cart
   main {
     .cart {
       padding: 1vh;
@@ -781,6 +691,43 @@ main {
         img {
           margin: auto;
           width: 100px;
+        }
+      }
+    }
+  }
+  //home
+  main {
+    .saleOverview {
+      .salephoto {
+        img {
+          width: 100%;
+        }
+      }
+      .hotsale {
+        .hotproducts {
+          .card {
+            .image {
+              img {
+                width: 100%;
+              }
+            }
+            .title {
+              font-size: 1.5vh;
+            }
+            .btns {
+              button {
+                font-size: 2vh;
+              }
+            }
+          }
+        }
+        .saledetails {
+          .salename {
+            font-size: 2.5vh;
+          }
+          .saledes {
+            font-size: 1.5vh;
+          }
         }
       }
     }
@@ -851,153 +798,6 @@ main {
       }
     }
   }
-  //home
-  //Overview
-  main {
-    .overview {
-      .categoryBtnWrapper {
-        width: fit-content;
-        display: flex;
-        background: rgb(255, 255, 255);
-        height: fit-content;
-        z-index: 999;
-        width: 100%;
-        justify-content: left;
-        // flex-wrap: wrap;
-        gap: 0px 2px;
-        // padding: 1vh;
-        h3 {
-          font-family: "ubuntu";
-        }
-        li {
-          list-style: none;
-          margin: 2vh 0;
-          a {
-            font-size: 2vh;
-            font-family: "roboto";
-            background-color: rgb(0, 61, 246);
-            color: white;
-            padding: 0.5vh 1vh;
-            display: block;
-            text-decoration: none;
-            border-radius: 0.6vh;
-          }
-        }
-      }
-      height: 100vh;
-      margin: 2vh 0 0 0;
-      display: flex;
-      flex-direction: column;
-      .slideImages {
-        // outline: red solid;
-        background-color: white;
-        -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-        overflow: hidden;
-        width: 90vw;
-        margin: auto;
-        border-radius: 1vh;
-        height: 100%;
-        display: flex;
-        img {
-          width: 300px;
-          animation: slideAnime 20s infinite;
-        }
-        p {
-          z-index: 999;
-          display: none;
-          .fa-bars-progress {
-            // outline: red solid;
-
-            padding: 1vh;
-            background-color: rgb(0, 0, 255);
-            backdrop-filter: blur(20px);
-            font-size: 3vh;
-            color: rgb(255, 255, 255);
-            border-radius: 0 0 1vh 0;
-          }
-        }
-      }
-      .salecard {
-        padding: 2vh;
-        .saleaside {
-          -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-          background-color: white;
-          border-radius: 1vh;
-          width: 90vw;
-          height: 100%;
-          .saleName {
-            text-align: center;
-            font-family: "ubuntu";
-            font-size: 3vh;
-            padding: 0.5vh 1vh;
-            background-color: rgb(240, 117, 10);
-            color: rgb(255, 255, 255);
-            .fa-bell {
-              animation: bell 0.5s infinite ease;
-            }
-            @keyframes bell {
-              0% {
-                transform: rotate(30deg);
-              }
-              33% {
-                transform: rotate(-30deg);
-              }
-              100% {
-                transform: rotate(30deg);
-              }
-            }
-          }
-          .des {
-            font-size: 2.2vh;
-            padding: 0.5vh 1vh;
-
-            font-family: "roboto";
-          }
-          .btn {
-            border: none;
-            background-color: rgba(2, 71, 83, 0.758);
-            font-size: 2vh;
-            color: white;
-            padding: 1vh 1.5vh;
-            width: fit-content;
-            border-radius: 0 1vh 0.6vh 0;
-            cursor: pointer;
-            margin: auto;
-          }
-          .brands {
-            background-color: blue;
-            color: white;
-            font-size: 2.2vh;
-            font-family: "ubuntu";
-            text-align: center;
-            padding: 1vh;
-            margin: 1vh 0;
-          }
-          .brandsBtns {
-            background-color: rgb(9, 83, 93);
-            padding: 1vh;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-            .brandbtn {
-              font-size: 2vh;
-              background-color: white;
-              border-radius: 0.6vh;
-              cursor: pointer;
-              padding: 0.5vh 2vh;
-              border: none;
-            }
-          }
-        }
-      }
-    }
-  }
   //product specs
   main {
     .productspecs {
@@ -1014,7 +814,6 @@ main {
         }
       }
       .productDetails {
-        // outline: red solid;
         margin: 0 0 0 2vh;
         padding: 0 2vh;
         .title {
@@ -1036,7 +835,7 @@ main {
         .des {
           font-size: 2vh;
           font-family: "roboto";
-          // outline: red solid;
+
           padding: 0.5vh;
           border-left: 2px red solid;
           margin-top: 2vh;
@@ -1044,7 +843,6 @@ main {
         }
       }
       .tags {
-        // outline: red solid;
         margin: 1vh 0;
         display: flex;
         flex-wrap: wrap;
@@ -1078,6 +876,37 @@ main {
         .wishlish {
           width: 49%;
           background-color: red;
+        }
+      }
+    }
+  }
+  //home
+  main {
+    .saleOverview {
+      flex-direction: column;
+      .salephoto {
+        background-color: white;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .hotsale {
+        width: 100%;
+        .hotproducts {
+          .card {
+            border: 1px solid;
+            background-color: white;
+            width: 22%;
+            .image {
+              width: 90%;
+            }
+          }
+        }
+        .hotbrands {
+          button {
+            width: 20vw;
+          }
         }
       }
     }
@@ -1137,7 +966,6 @@ main {
         }
       }
       .productDetails {
-        // outline: red solid;
         margin: 2vh 0 0 0;
         padding: 0vh;
         .title {
@@ -1159,7 +987,7 @@ main {
         .des {
           font-size: 1.6vh;
           font-family: "roboto";
-          // outline: red solid;
+
           padding: 0.5vh;
           border-left: 2px red solid;
           margin-top: 2vh;
@@ -1167,7 +995,6 @@ main {
         }
       }
       .tags {
-        // outline: red solid;
         margin: 1vh 0;
         display: flex;
         flex-wrap: wrap;
