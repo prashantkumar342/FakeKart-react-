@@ -28,7 +28,7 @@ const Home = () => {
       </ul>
       <div className="saleOverview">
         <div className="salephoto">
-          <img src="../public/sale.png" alt="" />
+          <img src="/sale.png" alt="" />
         </div>
         <div className="hotsale">
           <div className="hotproducts">
