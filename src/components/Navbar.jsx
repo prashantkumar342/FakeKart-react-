@@ -5,8 +5,13 @@ const Navbar = () => {
   const navMenuActive = () => {
     $('.navMenuLinks').toggleClass('active')
     $('.categoryBtnWrapper').removeClass('active')
+    $('.categoryPageContainer .categoryBtns').removeClass('active')
   }
-
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 5) {
+      $('.navMenuLinks').removeClass('active')
+    }
+  });
   $('.navMenuLinks').on("click", 'li', () => {
     $('.navMenuLinks').removeClass('active')
   })

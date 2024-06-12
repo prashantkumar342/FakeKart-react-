@@ -18,6 +18,22 @@ const Home = () => {
       .then(response => SetHotProducts(response.data.products))
   }, [])
 
+  const addToCart = (productId) => {
+    let cart = JSON.parse(localStorage.getItem('cartItems')) || []
+    let found = cart.some(id => id == productId)
+    if (!found) {
+      cart.push(productId)
+    }
+    localStorage.setItem('cartItems', JSON.stringify(cart))
+  }
+  const addToWishlist = (productId) => {
+    let wishlist = JSON.parse(localStorage.getItem('wishlistItems')) || []
+    let found = wishlist.some(id => id == productId)
+    if (!found) {
+      wishlist.push(productId)
+    }
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlist))
+  }
   return (
     <>
       <ul className="categoryBtnWrapper">
@@ -35,13 +51,13 @@ const Home = () => {
             {
               hotproducts.map((product) => (
                 <div className="card" key={product.id}>
-                  <div className="image">
+                  <Link to={`/category/${product.id}`} ><div className="image">
                     <img src={product.image} alt="" />
-                  </div>
-                  <p className="title">{product.title.slice(0, 10)}...</p>
+                  </div></Link>
+                  <Link to={`/category/${product.id}`} ><p className="title">{product.title.slice(0, 10)}...</p></Link>
                   <div className="btns">
-                    <button className="addtocart"><i className="fa-solid fa-cart-plus"></i></button>
-                    <button className="addtowishlist"><i className="fa-solid fa-heart-circle-plus"></i></button>
+                    <button className="addtocart" onClick={() => addToCart(product.id)}><i className="fa-solid fa-cart-plus"></i></button>
+                    <button className="addtowishlist" onClick={() => addToWishlist(product.id)}><i className="fa-solid fa-heart-circle-plus"></i></button>
 
                   </div>
 
